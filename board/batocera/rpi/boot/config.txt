@@ -47,3 +47,16 @@ initramfs boot/initrd.gz
 # enable UART (required for for retroflag)
 # affect rpi performances
 # enable_uart=1
+
+#tft screen
+#Waveshare 3.5 TFT Screen
+#same resolution for hdmi and tft
+hdmi_force_hotplug=1
+hdmi_cvt=480 320 60 1 0 0 0
+#hdmi_group=2
+#hdmi_mode=1
+#hdmi_mode=87
+ 
+dtparam=spi=on
+dtoverlay=waveshare35a:rotate=270,speed=27000000,fps=60
+# speed=41000000,fps=60 for better FPS, but the colors will look a little weird.
